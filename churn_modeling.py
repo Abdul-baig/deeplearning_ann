@@ -16,15 +16,11 @@ df=pd.read_csv('ch.csv')
 
 x=df.iloc[:,3:13]
 
-x
 
 y=df.iloc[:,13]
 
-y
-
 Geography=pd.get_dummies(x['Geography'],drop_first=True)
 
-Geography
 
 gender=pd.get_dummies(x['Gender'],drop_first=True)
 
@@ -32,11 +28,9 @@ gender
 
 x=pd.concat([x,Geography,Gender],axis=1)
 
-x
 
 x=x.drop(['Gender','Geography'],axis=1)
 
-x
 
 from sklearn.model_selection import train_test_split
 
